@@ -15,11 +15,11 @@ sudo sed -i "s/database_password="database_password"/database_password="$databas
 
 sudo mkdir $HOME/shell_startup
 sudo chmod +x ./postgreBackup.sh
-cp ./postgreBackup.sh $HOME/shell_startup
+sudo cp ./postgreBackup.sh $HOME/shell_startup
 
 echo "+++ INSERT AUTO BACKUP POSTGRESQL TO CRONJOB +++"
 sudo crontab -l > cron_bkp
-sudo echo "$time sync && sh -c ./$HOME/shell_startup/postgreBackup.sh" >> cron_bkp
+sudo echo "$time sync && sh -c $HOME/shell_startup/postgreBackup.sh" >> cron_bkp
 sudo crontab cron_bkp
 sudo rm cron_bkp
 
