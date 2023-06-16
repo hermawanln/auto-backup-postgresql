@@ -1,5 +1,4 @@
 #!/bin/bash
-#BIKIN INPUTAN databse name, user, password
 
 echo "[Input All Parameter]"
 echo ""
