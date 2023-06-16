@@ -4,9 +4,9 @@
 timestamp=$(date +%Y%m%d%H%M%S)
 backup_dir="/$HOME/superset" # outpunya akan .tar (konsepnya kaya zip jadi reduce size juga)
 log_file="/$HOME/superset/postgreBackup.log"
-database_name="database_name"
-database_user="database_user"
-database_password="database_password"
+database_name='database_name'
+database_user='database_user'
+database_password='database_password'
 
 # Create backup directory if it doesn't exist
 mkdir -p "$backup_dir"

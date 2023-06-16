@@ -5,9 +5,9 @@ timestamp=$(date +%Y%m%d%H%M%S)
 backup_file="/$HOME/superset/20230615111337.tar"
 #backup_file="/$HOME/billingcenter.sql"
 log_file="/$HOME/superset/fileRestore.log"
-database_name="njajal"
-database_user="admin"
-database_password="postgre123"
+database_name='database_name'
+database_user='database_user'
+database_password='database_password'
 
 # Restore command
 restore_command="pg_restore -U $database_user -w -d $database_name -c $backup_file"
